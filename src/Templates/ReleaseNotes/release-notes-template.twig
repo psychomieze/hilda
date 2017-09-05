@@ -1,0 +1,52 @@
+{% extends "Layouts/layout.html.twig" %}
+{% block content %}
+    <h3>Release Notes:</h3>
+    <pre>
+{{ '{{ ' }} Head-Administrator {{ '}}' }}
+
+= Release Notes for TYPO3 CMS {{ full_version }} =
+
+This document contains information about TYPO3 CMS {{ full_version }} which was released {{ release_date }}.
+
+== News ==
+
+{{ release_type }}
+
+== Notes ==
+
+{{ additional_notes }}
+
+== Download ==
+
+https://typo3.org/download/
+
+== MD5 checksums ==
+
+&lt;pre&gt;{{ md5_sums }}&lt;/pre&gt;
+
+== Upgrading ==
+
+The [https://docs.typo3.org/typo3cms/InstallationGuide/ usual upgrading procedure] applies. No database updates are necessary.
+
+It might be required to clear all caches; the "important actions" section in the TYPO3 Install Tool offers the accordant possibility to do so.
+
+{% if upgrade_notes %}
+=== Additional ===
+
+{{ upgrade_notes }}
+
+{% endif %}
+
+== Changes ==
+
+Here is a list of what was fixed since [[TYPO3_CMS_{{ full_version }} | {{ full_version }}]]:
+
+{{ changelog|raw }}
+
+{{ '{{ ' }} Release Notes Past {{ '}}' }}
+
+[[Category:ReleaseNotes/TYPO3_{{ major_version }}.x]]
+[[Category:TYPO3 {{ major_version }}]]
+[[Category:{{ year }}]]
+    </pre>
+{% endblock  %}

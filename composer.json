@@ -1,0 +1,26 @@
+{
+  "name": "typo3/release-package",
+  "description": "packaging releases of TYPO3 CMS",
+  "minimum-stability": "alpha",
+  "license": "GPL-2.0",
+  "authors": [
+    {
+      "name": "Susanne Moog",
+      "email": "susanne.moog@typo3.com"
+    }
+  ],
+  "require": {
+    "silex/silex": "v2.1.0",
+    "symfony/form": "^3.3",
+    "symfony/validator": "^3.3",
+    "symfony/config": "^3.3",
+    "symfony/twig-bridge": "^3.3",
+    "addwiki/mediawiki-api": "0.7.1",
+    "vlucas/phpdotenv": "^2.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "TYPO3\\Hilda\\": "src/"
+    }
+  }
+}
